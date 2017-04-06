@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>SoS Desastres</title>
+	<!--<link rel="stylesheet icon" href="favicon.ico">-->
+	<link rel="stylesheet" href="css/font-awesome.css">	
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<!--REQUIRED STYLE SHEETS-->
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/queries/queries.css">
+	 <meta name="google-signin-client_id" content="1015828251628-j6p6g2hugetkfovug27i1l3nlaem445d.apps.googleusercontent.com">
+</head>
+<body class="text-center">
+	
+<header>
+
+
+	
+</header>
+<!----------------LOGIN--------------------------------------------------->
+<section id="login" class="visible">
+	<div class="content">
+		<div class="container">
+           <div class="logo">
+                <img src="images/logo-sos.png" alt="" class="img-responsive">
+               <h2>DESASTRE</h2>
+           </div>
+           
+           <div class="col-md-6 col-md-offset-3">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat fuga eaque sequi ad odio eos veniam repellendus, molestias dolor consectetur, saepe incidunt, nobis laboriosam iste explicabo excepturi. Ipsam, consequuntur, suscipit.</p>
+               <button id="facebook" class="btn-lg"><i class="fa fa-facebook" aria-hidden="true"></i> Facebook</button> 
+               <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+               </fb:login-button>
+              <button id="google" class="btn-lg"><i class="fa fa-google" aria-hidden="true"></i> Google</button><br>
+               <!-- HTML for render Google Sign-In button -->
+            <div id="gSignIn"></div>
+            <!-- HTML for displaying user details -->
+            <div class="userContent"></div>
+                <button id="registrate" class="btn-lg"> Registrate</button> 
+            </div>
+            <button id="btn_inicio">va accion</button>   
+               
+            <div id="status">
+            </div>
+                
+            </div>   
+		</div>
+	</div>
+</section> 
+<!----------------ACCION--------------------------------------------------->
+<section id="accion" class="accion">
+	<div class="content">
+		<div class="container">
+           <h2>¿En qué situación te encuentras?</h2>
+            <p><button class="btn btn-lg" id="btn_reportar">Reportar Desastre</button></p>
+            <p><button class="btn btn-lg" id="btn_buscar_ayuda">Buscar Ayuda cercana</button></p>
+            <p><button class="btn btn-lg" id="">Brindar Ayuda</button></p>
+		    <!--<button id="btn_accion">next button</button>-->  	
+		</div>
+	</div>
+</section>
+
+<!----------------REPORTAR-DESASTRE--------------------------------------------------->
+<section id="reportar-desastre">
+	<div class="content">
+            <div class="container">
+            REPORTAR-DESASTRE
+                <div id="map"></div>
+
+               <!--action="/action_page_binary.asp" method="post" enctype="multipart/form-data"-->
+                <div id="d-info">
+                   <form method="post" action="" name="validation" id="form-info">
+                        <select class="form-control">    
+                            <option value="">Selecciona un tipo de desastre</option>
+                            <option value="">Incendios</option>
+                            <option value="">Derrumbe</option>
+                            <option value="">Inundación</option>
+                            <option value="volvo">Huayco</option>
+                            <option value="">Terremoto</option>
+                            <option value="">Tsunami</option>
+                        </select>    
+                        <br>
+                        <input class="form-control" type="text" placeholder="Dirección exacta">
+                        <br>
+                        <input class="form-control" accept="image/*" type="file" capture>
+                        <img id="uploadPreview" style="width: 100px; height: 100px;" />  
+                        
+                        <button type="submit" value="Submit" id="btn_tipo_ayuda">NEXT</button> 
+                    </form> 
+                </div>
+                
+                <div id="m-buscar">
+                   <input id="pac-input" class="form-control controls input-lg" type="text" placeholder="Buscar centros de ayuda" style="color:black">
+                   <div class="row">
+                       <div class="col-xs-4">
+                           <button id="hospital" class="btn btn-warning btn-block">Hospitales</button>
+                       </div>
+                       <div class="col-xs-4">
+                           <button id="bombero" class="btn btn-warning btn-block">Bomberos</button>
+                       </div>
+                       <div class="col-xs-4">
+                          <button id="comisaria" class="btn btn-warning btn-block">Comisarias</button>
+                       </div>
+                   </div>
+                   <br>
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <button><a href="tel:+105"><i class="fa fa-phone" aria-hidden="true"></i></a></button>
+                        </div>
+                        <div class="col-xs-6">
+                            <button><a href="sms:+105"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></button>
+                        </div>
+                    </div> 
+                    <button type="submit" value="Submit" id="btn_buscar">NEXT</button>    
+                </div>
+                
+            </div>
+        </div>
+</section>
+<!----------------BUSCAR-AYUDA--------------------------------------------------->            
+<section id="buscar-ayuda">
+	<div class="content">
+		<div class="container">
+            BUSCAR-AYUDA
+            <div class="map"></div>
+		    <!--<button id="btn_busca_ayuda">NEXT</button>-->	
+		</div>
+	</div>
+</section>
+
+<!----------------TIPO-AYUDA----------------------------------------------
+<section id="tipo-ayuda">
+	<div class="content">
+		<div class="container">
+        TIPO-AYUDA
+		    <!--<button id="btn_tipo_ayuda">NEXT</button>	
+		</div>
+	</div>
+</section>
+----->
+<!----------------CENTROS-AYUDA--------------------------------------------------->
+<section id="centros-ayuda">
+    <div class="content">
+        <div class="container">
+           CENTRO-AYUDA
+            <!--<button id="btn_centros_ayuda">NEXT</button>-->    
+        </div>
+    </div>
+</section>
+<!----------------LISTA-DESASTRES--------------------------------------------------->
+<section id="lista-desastres">
+    <div class="content">
+        <div class="container">
+           LISTA-DESASTRE
+            <button id="btn_lista_desastres">NEXT</button>    
+        </div>
+    </div>
+</section>
+<!----------------INFO-DESASTRES--------------------------------------------------->
+<section id="info-desastres">
+    <div class="content">
+        <div class="container">
+           INFO-DESASTRE
+            <button id="btn_info_desastres">NEXT</button>    
+        </div>
+    </div>
+</section>
+<!----------------SCRIPTS--------------------------------------------------->	
+    <script src="js/jquery.min.js"></script>
+    <script src="https://apis.google.com/js/client:platform.js?onload=renderButton" async defer></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTCqoAARuw47ZDf2wg7OlrkVaPnDAlNbI&libraries=places"
+         async defer></script>
+         <script src="js/login-g.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/main.js"></script>	
+	<script src="js/hospitales.js"></script>
+	<script src="js/login-f.js"></script>	
+</body>
+</html>

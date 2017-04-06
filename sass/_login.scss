@@ -1,0 +1,72 @@
+section#login{
+    background: url("../pictures/map-background.png");
+    *{outline: 1px solid rgba(0,255,0,0.3)}
+    .content{
+        background: rgba(8,19,48,0.8);
+
+        .logo{
+            width:250px;
+            margin: 0 auto ;
+            img{
+                
+            }
+        }
+        P{
+             margin-bottom: 80px;
+            padding-top: 30px;
+        }
+        button{
+            width: 230px;
+            margin: 10px 0;
+            
+        }
+        button#facebook{
+            background: rgb(59,89,151);
+            border-color: rgb(59,89,151);
+        }
+        button#google{
+            background: rgb(255,104,104);
+            border-color: rgb(255,104,104);
+        }
+         button#registrate{
+            background: rgb(255,104,104);
+            border-color: rgb(255,104,104);
+        }
+        
+    }
+    
+    
+    
+    
+}
+section#registro{
+    color: black;
+    h2{
+        padding-bottom: 40px;
+    }
+    form {
+        div{
+            padding: 5px;
+        }
+        button{
+            width: 90%;
+            margin: 10px 0;
+        }
+    }
+    
+}
+//jvcnvjcnvmc google
+.profile{
+    border: 3px solid #B7B7B7;
+    padding: 10px;
+    margin-top: 10px;
+    width: 350px;
+    background-color: #F7F7F7;
+    height: 160px;
+}
+.profile p{margin: 0px 0px 10px 0px;}
+.head{margin-bottom: 10px;}
+.head a{float: right;}
+.profile img{width: 100px;float: left;margin: 0px 10px 10px 0px;}
+.proDetails{float: left;}
+        

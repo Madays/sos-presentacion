@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACA,8BAA8B;ACA9B,2BAA2B;ACA3B,4BAA4B;ACA5B,kCAAkC",
+"sources": ["../../sass/queries/_xs-queries.scss","../../sass/queries/_sm-queries.scss","../../sass/queries/_md-queries.scss","../../sass/queries/_lg-queries.scss"],
+"names": [],
+"file": "queries.css"
+}
