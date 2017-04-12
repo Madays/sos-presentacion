@@ -1,0 +1,180 @@
+/*@import "variables/variables";
+@import "mixin/mixin";*/
+@import "https://fonts.googleapis.com/css?family=Merriweather+Sans";
+/***************General***************/
+@import "https://fonts.googleapis.com/css?family=Merriweather+Sans";
+@import "https://fonts.googleapis.com/css?family=Merriweather+Sans";
+body {
+  font-family: "Merriweather Sans"; }
+
+.accion {
+  background: url(../images/map-background.png);
+  width: 100%;
+  height: 100vh; }
+  .accion .content {
+    background: rgba(8, 19, 48, 0.8); }
+    .accion .content h2 {
+      margin-bottom: 100px;
+      font-weight: bold; }
+    .accion .content button {
+      background: #ff6868;
+      width: 230px;
+      margin: 10px 0;
+      box-shadow: 2px 2px rgba(0, 0, 0, 0.5); }
+    .accion .content button:hover {
+      background: #000;
+      color: #fff; }
+
+/************************GENERAL************************/
+#map {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  height: 100%; }
+
+#d-info {
+  position: absolute;
+  z-index: 2;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: #ebebeb;
+  margin: 0 auto;
+  color: #fff;
+  padding: 0;
+  padding-top: 20px; }
+  #d-info #btn_tipo_ayuda {
+    width: 100%;
+    padding: 15px;
+    background-color: #ff6868;
+    margin-top: 10px; }
+  #d-info select, #d-info input {
+    width: 95%;
+    margin: 0 auto; }
+
+#m-buscar {
+  position: absolute;
+  z-index: 4;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #ebebeb;
+  margin: 0 auto;
+  color: #fff;
+  padding: 0;
+  padding-top: 20px; }
+  #m-buscar .row {
+    margin-right: 0;
+    margin-left: 0; }
+  #m-buscar button {
+    border-color: #ebebeb; }
+    #m-buscar button i {
+      font-size: 30px;
+      color: firebrick;
+      background-color: #ebebeb; }
+  #m-buscar #btn_buscar {
+    width: 100%;
+    padding: 15px;
+    background-color: #28d;
+    margin-top: 10px; }
+  #m-buscar #pac-input {
+    position: absolute;
+    z-index: 5;
+    width: 100%;
+    top: 10px;
+    padding: 10px 0;
+    padding-top: 10px;
+    color: black; }
+
+body {
+  font-family: "Merriweather Sans"; }
+
+section#login {
+  background: url("../pictures/map-background.png"); }
+  section#login * {
+    outline: 1px solid rgba(0, 255, 0, 0.3); }
+  section#login .content {
+    background: rgba(8, 19, 48, 0.8); }
+    section#login .content .logo {
+      width: 220px;
+      margin: 0 auto; }
+    section#login .content p {
+      margin-bottom: 80px;
+      padding-top: 30px; }
+    section#login .content button {
+      width: 230px;
+      margin: 10px 0;
+      background: #3b5998;
+      padding: 10px 0;
+      font-weight: 300;
+      box-shadow: 1px 1px rgba(0, 0, 0, 0.4); }
+    section#login .content button:hover {
+      background: #000;
+      color: #fff; }
+
+section#registro h2 {
+  padding-bottom: 20px; }
+section#registro form .form-group {
+  margin-bottom: 5px !important; }
+section#registro form button {
+  width: 100%;
+  margin: 10px 0;
+  background: #ff6868; }
+
+section#login {
+  background: url("../pictures/map-background.png"); }
+  section#login .content {
+    background: rgba(8, 19, 48, 0.8); }
+
+.login {
+  width: 100%; }
+
+.login-header {
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff; }
+
+.login-container {
+  background: #ebebeb;
+  padding: 12px; }
+
+.login input {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  border-width: 1px;
+  border-style: solid;
+  padding: 16px;
+  outline: 0;
+  font-family: inherit;
+  font-size: 0.95em; }
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: "Merriweather Sans" !important; }
+
+section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  opacity: 0;
+  color: #fff; }
+
+.visible {
+  display: table;
+  opacity: 1; }
+
+.content {
+  display: table-cell;
+  vertical-align: middle; }
+
+/*# sourceMappingURL=style.css.map */

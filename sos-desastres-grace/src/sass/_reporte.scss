@@ -1,0 +1,81 @@
+* {
+//    outline: 1px solid rgba(255,0,0,0.4)!important; 
+}
+#map {
+    position: absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom: 0;
+    z-index:1;
+    height: 100%;
+}
+
+#d-info {
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: #ebebeb;
+    margin: 0 auto;
+    color: #fff;
+    padding: 0;
+    padding-top: 20px;
+    
+    #btn_tipo_ayuda{
+        width: 100%;
+        padding: 15px;
+        background-color: rgb(255,104,104);
+        margin-top: 10px;
+    }
+    select, input {
+        width:  95%;  
+        margin: 0 auto;
+    }
+}
+#m-buscar {
+    position: absolute;
+    z-index: 4;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color:#ebebeb;
+    margin: 0 auto;
+    color: #fff;
+    padding: 0;
+    padding-top: 20px;
+    
+    .row {
+        margin-right: 0;
+        margin-left: 0; 
+    }
+    button{
+        border-color: #ebebeb;
+        i{
+            font-size: 30px;
+            color:firebrick;
+            background-color: #ebebeb;
+            
+        }
+    }
+    #btn_buscar{
+        width: 100%;
+        padding: 15px;
+        background-color: #28d;
+        margin-top: 10px;
+    }
+    #pac-input {
+        position: absolute;
+        z-index: 5;
+        width: 100%;
+        top: 10px;
+        padding: 10px 0;
+        padding-top: 10px;
+        color: black;
+    }
+}
+
+
+
+

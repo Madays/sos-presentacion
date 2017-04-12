@@ -10,17 +10,20 @@
 	<!--REQUIRED STYLE SHEETS-->
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/queries/queries.css">
+	<link href="https://fonts.googleapis.com/css?family=Merriweather+Sans" rel="stylesheet">
 	 <meta name="google-signin-client_id" content="1015828251628-j6p6g2hugetkfovug27i1l3nlaem445d.apps.googleusercontent.com">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parse/1.9.2/parse.min.js"></script>
+    <script src="js/login-f.js"></script>	
+    <script>
+        Parse.initialize("01a59dc77c1f4eb02b3e53edc2eea6268c3764d4");
+         Parse.serverURL = 'http://13.85.14.164/parse';
+        initFB();
+        
+    </script>
 </head>
 <body class="text-center">
-	
-<header>
-
-
-	
-</header>
 <!----------------LOGIN--------------------------------------------------->
-<section id="login"  class="visible">
+<section id="login" class="visible">
 	<div class="content">
 		<div class="container">
            <div class="logo">
@@ -32,9 +35,80 @@
                 <button class="btn" id="login-button">Login</button>
                 <br>
                 <button class="btn" id="signup-button">Signup</button>
+
             </div>
         </div>   
     </div>
+</section> 
+<!----------------formulario de registro- compañia--------------------------------------------------->
+<section id="registro-comp"   >
+	<div class="content">
+		<div class="container">
+           <h2>Registrate</h2>
+            <div class="col-md-8 col-md-offset-2">
+                <form id="compa-form" class="compa-form" method="post" action=""  name="validation" >
+                  <div class="form-group">
+                        <label for="exampleInputEmail1" class="pull-left">Email </label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+
+                      </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1" class="pull-left">Contraseña</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                      </div>
+                   <div class="form-group">
+                        <label for="exampleInputName2" class="pull-left">Nombre </label>
+                        <input type="text" class="form-control" id="exampleInputName2" placeholder="Paz Peru">
+                      </div>
+                        <div class="form-group">
+                        <label for="exampleInputName2" class="pull-left">Direccion</label>
+                        <input type="text" class="form-control" id="exampleInputName2" placeholder="Av. Salaverry #213">
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputName2" class="pull-left">telefono</label>
+                        <input type="text" class="form-control" id="exampleInputName2" placeholder="052 746930">
+                      </div>
+                    
+                    <div class="form-group">
+                    <label for="exampleSelect1" class="pull-left">Tipo de Organizacion</label>
+                    <select class="form-control" id="exampleSelect1">
+                      <option>Gubernamental</option>
+                      <option>No Gubernamental</option>
+                      
+                    </select>
+                  </div>
+                   
+                  <div class="form-group">
+                    <label for="exampleTextarea" class="pull-left">Descripcion</label>
+                    <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+                  </div>
+                
+                 
+                  
+                  <button type="submit" class="btn btn-lg btn-primary">Enviar</button>
+                </form>
+                
+            </div>  	
+		</div>
+	</div>
+</section>
+<!----------------login organizacion--------------------------------------------------->
+<section id="log-orga"  >
+	<div class="content">
+		<div class="container">
+           <div class="login col-md-8 col-md-offset-2">
+          <div class="login-triangle"></div>
+
+          <h2 class="login-header">Log in</h2>
+
+          <form class="login-container">
+            <p><input type="email" placeholder="Email"></p>
+            <p><input type="password" placeholder="Password"></p>
+            <p><input type="submit" value="Enviar"></p>
+          </form>
+        </div>
+		</div>
+	</div>
 </section>
 <!----------------ACCION--------------------------------------------------->
 <section id="accion" class="accion" >
@@ -49,8 +123,9 @@
 	</div>
 </section>
 
+
 <!----------------REPORTAR-DESASTRE--------------------------------------------------->
-<section id="reportar-desastre">
+<section id="reportar-desastre" >
 	<div class="content">
             <div class="container">
             REPORTAR-DESASTRE
@@ -59,22 +134,22 @@
                <!--action="/action_page_binary.asp" method="post" enctype="multipart/form-data"-->
                 <div id="d-info">
                    <form method="post" action="" name="validation" id="form-info">
-                        <select class="form-control">    
+                        <select id="myselect" class="form-control">    
                             <option value="">Selecciona un tipo de desastre</option>
-                            <option value="">Incendios</option>
-                            <option value="">Derrumbe</option>
-                            <option value="">Inundación</option>
-                            <option value="volvo">Huayco</option>
-                            <option value="">Terremoto</option>
-                            <option value="">Tsunami</option>
+                            <option value="incendio">Incendios</option>
+                            <option value="derrumbe">Derrumbe</option>
+                            <option value="inundacion">Inundación</option>
+                            <option value="huayco">Huayco</option>
+                            <option value="terremoto">Terremoto</option>
+                            <option value="tsunami">Tsunami</option>
                         </select>    
-                        <br>
-                        <input class="form-control" type="text" placeholder="Dirección exacta">
-                        <br>
-                        <input class="form-control" accept="image/*" type="file" capture>
-                        <img id="uploadPreview" style="width: 100px; height: 100px;" />  
-                        
-                        <button type="submit" value="Submit" id="btn_tipo_ayuda">NEXT</button> 
+                    <br>
+                    <input id="direction" class="form-control" type="text" placeholder="Dirección exacta">
+                    <br>
+                    <input id="form-image" class="form-control" accept="image/*" type="file" capture onchange="previewImage()">
+                    <br>
+                    <img id="uploadPreview" style="width: 100px; height: 100px;" />  
+                    <button type="submit" value="Submit" class="btn_tipo_ayuda">NEXT</button> 
                     </form> 
                 </div>
                 
@@ -94,10 +169,10 @@
                    <br>
                     <div class="row">
                         <div class="col-xs-6">
-                            <button><a href="tel:+105"><i class="fa fa-phone" aria-hidden="true"></i></a></button>
+                            <button><i class="fa fa-phone" aria-hidden="true"></i></button>
                         </div>
                         <div class="col-xs-6">
-                            <button><a href="sms:+105"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></button>
+                            <button><i class="fa fa-envelope-o" aria-hidden="true"></i></button>
                         </div>
                     </div> 
                     <button type="submit" value="Submit" id="btn_buscar">NEXT</button>    
@@ -128,14 +203,16 @@
 </section>
 ----->
 <!----------------CENTROS-AYUDA--------------------------------------------------->
+<!--
 <section id="centros-ayuda">
     <div class="content">
         <div class="container">
            CENTRO-AYUDA
-            <!--<button id="btn_centros_ayuda">NEXT</button>-->    
+            <button id="btn_centros_ayuda">NEXT</button>    
         </div>
     </div>
 </section>
+-->
 <!----------------LISTA-DESASTRES--------------------------------------------------->
 <section id="lista-desastres">
     <div class="content">
@@ -158,12 +235,14 @@
     <script src="js/jquery.min.js"></script>
     <script src="https://apis.google.com/js/client:platform.js?onload=renderButton" async defer></script>
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTCqoAARuw47ZDf2wg7OlrkVaPnDAlNbI&libraries=places"
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCr4N1khF2DNbZAhVBynGOvwtVIqYdlF1A&libraries=places"
          async defer></script>
-         <script src="js/login-g.js"></script>
+         <!--
+         AIzaSyCr4N1khF2DNbZAhVBynGOvwtVIqYdlF1A-->
+    <script src="js/login-g.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/main.js"></script>	
-	<script src="js/hospitales.js"></script>
-	<script src="js/login-f.js"></script>	
+	<script src="js/server.js"></script>
+	
 </body>
 </html>

@@ -10,15 +10,15 @@
 	<!--REQUIRED STYLE SHEETS-->
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/queries/queries.css">
+	<link href="https://fonts.googleapis.com/css?family=Merriweather+Sans" rel="stylesheet">
 	 <meta name="google-signin-client_id" content="1015828251628-j6p6g2hugetkfovug27i1l3nlaem445d.apps.googleusercontent.com">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parse/1.9.2/parse.min.js"></script>
+    <script>
+        Parse.initialize("nyctwo");
+        Parse.serverURL = 'http://138.197.71.215:1337/parse';
+    </script>
 </head>
 <body class="text-center">
-	
-<header>
-
-
-	
-</header>
 <!----------------LOGIN--------------------------------------------------->
 <section id="login"  class="visible">
 	<div class="content">
@@ -29,12 +29,85 @@
                <h2>DESASTRE</h2>
                <p>Una app que informa y ayuda frente a desastres naturales. <br>Recuerda no perder la calma ante algun desastre.</p>
            <div class="col-md-offset-3 col-md-6  col-sm-offset-1 col-sm-10 col-xs-12">
-                <button class="btn" id="login-button">Login</button>
+                <button>Ingresar</button>
+                <!--<button class="btn" id="login-button">Login</button>
                 <br>
-                <button class="btn" id="signup-button">Signup</button>
+                <button class="btn" id="signup-button">Signup</button>-->
             </div>
         </div>   
     </div>
+</section> 
+<!----------------formulario de registro- compañia--------------------------------------------------->
+<section id="registro"  >
+	<div class="content">
+		<div class="container">
+           <h2>Registrate</h2>
+            <div class="col-md-8 col-md-offset-2">
+                <form id="compa-form" >
+                  <div class="form-group">
+                        <label for="exampleInputEmail1" class="pull-left">Email </label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+
+                      </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1" class="pull-left">Contraseña</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                      </div>
+                   <div class="form-group">
+                        <label for="exampleInputName2" class="pull-left">Nombre </label>
+                        <input type="text" class="form-control" id="exampleInputName2" placeholder="Paz Peru">
+                      </div>
+                        <div class="form-group">
+                        <label for="exampleInputName2" class="pull-left">Direccion</label>
+                        <input type="text" class="form-control" id="exampleInputName2" placeholder="Av. Salaverry #213">
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputName2" class="pull-left">telefono</label>
+                        <input type="text" class="form-control" id="exampleInputName2" placeholder="052 746930">
+                      </div>
+                    
+                    <div class="form-group">
+                    <label for="exampleSelect1" class="pull-left">Tipo de Organizacion</label>
+                    <select class="form-control" id="exampleSelect1">
+                      <option>Gubernamental</option>
+                      <option>No Gubernamental</option>
+                      
+                    </select>
+                  </div>
+                   
+                  <div class="form-group">
+                    <label for="exampleTextarea" class="pull-left">Descripcion</label>
+                    <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+                  </div>
+                
+                 
+                  
+                  <button type="submit" class="btn btn-lg btn-primary">Enviar</button>
+                </form>
+                
+            </div>  	
+		</div>
+	</div>
+</section>
+<!----------------login organizacion--------------------------------------------------->
+<section id="log-orga" >
+	<div class="content">
+		<div class="container">
+<!--
+           <div class="login col-md-8 col-md-offset-2">
+          <div class="login-triangle"></div>
+
+          <h2 class="login-header">Log in</h2>
+
+          <form class="login-container">
+            <p><input type="email" placeholder="Email"></p>
+            <p><input type="password" placeholder="Password"></p>
+            <p><input type="submit" value="Enviar"></p>
+          </form>
+        </div>
+-->
+		</div>
+	</div>
 </section>
 <!----------------ACCION--------------------------------------------------->
 <section id="accion" class="accion" >
@@ -49,8 +122,9 @@
 	</div>
 </section>
 
+
 <!----------------REPORTAR-DESASTRE--------------------------------------------------->
-<section id="reportar-desastre">
+<section id="reportar-desastre" >
 	<div class="content">
             <div class="container">
             REPORTAR-DESASTRE
@@ -94,10 +168,10 @@
                    <br>
                     <div class="row">
                         <div class="col-xs-6">
-                            <button><a href="tel:+105"><i class="fa fa-phone" aria-hidden="true"></i></a></button>
+                            <button><i class="fa fa-phone" aria-hidden="true"></i></button>
                         </div>
                         <div class="col-xs-6">
-                            <button><a href="sms:+105"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></button>
+                            <button><i class="fa fa-envelope-o" aria-hidden="true"></i></button>
                         </div>
                     </div> 
                     <button type="submit" value="Submit" id="btn_buscar">NEXT</button>    
@@ -128,14 +202,16 @@
 </section>
 ----->
 <!----------------CENTROS-AYUDA--------------------------------------------------->
+<!--
 <section id="centros-ayuda">
     <div class="content">
         <div class="container">
            CENTRO-AYUDA
-            <!--<button id="btn_centros_ayuda">NEXT</button>-->    
+            <button id="btn_centros_ayuda">NEXT</button>    
         </div>
     </div>
 </section>
+-->
 <!----------------LISTA-DESASTRES--------------------------------------------------->
 <section id="lista-desastres">
     <div class="content">

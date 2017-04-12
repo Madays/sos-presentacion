@@ -1,17 +1,10 @@
-section#login{
-    background: url("../pictures/map-background.png");
-    *{outline: 1px solid rgba(0,255,0,0.3)}
-    .content{
-        background: rgba(8,19,48,0.8);
-
-        @import "https://fonts.googleapis.com/css?family=Merriweather+Sans" ;
+@import "https://fonts.googleapis.com/css?family=Merriweather+Sans" ;
 
 body{
     font-family: "Merriweather Sans";
 }
 section#login{
     background: url("../pictures/map-background.png");
-    *{outline: 1px solid rgba(0,255,0,0.3)}
     .content{
         background: rgba(8,19,48,0.8);
 
@@ -42,41 +35,54 @@ section#login{
         
     }  
 }
-        
-    }
-    
-    
-    
-    
-}
+
 section#registro{
-    color: black;
+    
     h2{
-        padding-bottom: 40px;
+        padding-bottom: 20px;
     }
     form {
-        div{
-            padding: 5px;
+        .form-group {
+    margin-bottom: 5px !important; 
         }
         button{
-            width: 90%;
+            width: 100%;
             margin: 10px 0;
+            background: rgb(255,104,104);
         }
     }
     
 }
-//jvcnvjcnvmc google
-.profile{
-    border: 3px solid #B7B7B7;
-    padding: 10px;
-    margin-top: 10px;
-    width: 350px;
-    background-color: #F7F7F7;
-    height: 160px;
+
+section#login{
+    
+background: url("../pictures/map-background.png");
+.content{
+        background: rgba(8,19,48,0.8);
+    }
 }
-.profile p{margin: 0px 0px 10px 0px;}
-.head{margin-bottom: 10px;}
-.head a{float: right;}
-.profile img{width: 100px;float: left;margin: 0px 10px 10px 0px;}
-.proDetails{float: left;}
-        
+.login {
+  width: 100%;
+}
+.login-header {
+  background:  rgba(0,0,0,0.8);
+  color: #fff;
+}
+
+.login-container {
+  background: #ebebeb;
+  padding: 12px;
+}
+
+.login input {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  border-width: 1px;
+  border-style: solid;
+  padding: 16px;
+  outline: 0;
+  font-family: inherit;
+  font-size: 0.95em;
+}
+
