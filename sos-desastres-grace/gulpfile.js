@@ -7,7 +7,6 @@ var jshint = require('gulp-jshint');
 var sass = require('gulp-sass');
 var minifyCSS = require('gulp-minify-css');
 
-
 gulp.task('script-bootstrap', function(cb){
 	// tarea script
     return gulp.src('./node_modules/bootstrap/dist/js/bootstrap.min.js')

@@ -91,7 +91,7 @@ body {
 section#login {
   background: url("../pictures/map-background.png"); }
   section#login * {
-    outline: 1px solid rgba(0, 255, 0, 0.3); }
+    outline: 1px solid rgba(0, 255, 0, 0.3);}
   section#login .content {
     background: rgba(8, 19, 48, 0.8); }
     section#login .content .logo {

@@ -17,9 +17,7 @@ function onClickAccion()
       
 }
 
-function onClickReportar(){
-    
-    
+function onClickReportar(){    
     goToSection('reportar-desastre');
     
     var toTipoAyuda = $('#m-buscar');
@@ -69,8 +67,7 @@ function goToSection(_id)
     currentSection.removeClass('visible');
     var nextSection = $('#'+_id);
     nextSection.addClass('visible'); 
-    currentSection=nextSection;
-    
+    currentSection=nextSection;    
 }
  
 function initAutocomplete() {
@@ -81,8 +78,7 @@ function getLocation() {
         navigator.geolocation.watchPosition(showPosition);
     } else { 
         alert("Geolocation is not supported by this browser.");
-    }
-    
+    }    
 }
 
 function showPosition(position) {
